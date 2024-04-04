@@ -1,0 +1,92 @@
+:root {
+  /* Define color variables */
+  --dark-red: #331111;
+  --bright-red: #831f16;
+  --yellow: #ddcc66;
+  --dark-peach: #c09268;
+}
+
+.content-container {
+  /* Style for the main content container */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 900px;
+  margin-top: 80px;
+}
+
+.card__img-container img {
+  /* Style for the card image */
+  margin-top: 10px;
+  width: 230px;
+  height: 140px;
+  border: 5px solid var(--dark-peach);
+  border-radius: 5px;
+}
+
+.card {
+  /* Style for the card */
+  width: 260px;
+  height: 360px;
+  padding: 0.8em;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 10px 13px rgba(0, 0, 0, 0.12), 0 5px 10px rgba(0, 0, 0, 0.24);
+  border: 2px solid var(--dark-peach);
+}
+
+.card__img-container {
+  /* Style for the card image container */
+  display: flex;
+  justify-content: center;
+  transition: 0.5s ease;
+}
+
+.card__info {
+  /* Style for the card info section */
+  padding: 0 6% 0 6%;
+}
+
+svg {
+  /* Style for SVG icons */
+  width: 20px;
+  height: 20px;
+}
+
+.card__footer {
+  /* Style for the card footer */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+/*Text*/
+.card__title {
+  /* Style for the card title */
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.card__body {
+  /* Style for the card body text */
+  font-size: 0.9em;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.card__img-container:hover {
+  /* Style for the card image container on hover */
+  transform: translateY(-25%);
+}
+
+.card__button:hover {
+  /* Style for the card button on hover */
+  border: 1px solid var(--bright-red);
+  background-color: var(--bright-red);
+}

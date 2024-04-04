@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the character encoding and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="./globals.css" />
+    <link rel="stylesheet" href="./contact.css" />
+
+    <title>Contact</title>
+  </head>
+  <body>
+    <!-- Header section -->
+    <header class="header">
+      <!-- Logo -->
+      <img
+        class="header__logo"
+        src="./images/pngwing.com.png"
+        alt="fnv-logo.png"
+      />
+
+      <!-- Navigation -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="./index.html">home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./factions.html">factions</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./games.html">games</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content section -->
+    <section>
+      <span class="page-title">CONTACT</span>
+      <blockquote class="blockquote">
+        "Don't look like nothing too serious. Lemme patch you up."
+        <br /><cite class="blockquote__cite">- Doc Mitchell</cite>
+      </blockquote>
+      <div class="content-container">
+        <div class="content-container__inner">
+          <!-- Image container -->
+          <div class="content-container__img-div">
+            <img src="./images/DocMitchell.webp" alt="" />
+          </div>
+          <!-- Contact form -->
+          <form class="form">
+            <!-- Form fields and inputs -->
+            <form class="form">
+              <!-- Name Field -->
+              <label class="form__label" for="name">*Name:</label>
+              <input
+                class="form__input"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+              <!-- Surname Field -->
+              <label class="form__label" for="surname">*Surname:</label>
+              <input
+                class="form__input"
+                type="text"
+                id="surname"
+                name="surname"
+                required
+              />
+              
+              <!-- Gender Field -->
+              <label class="form__label" for="gender">*Gender:</label>
+              <select class="form__select" id="gender" name="gender" required>
+                <option value="">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+  
+              <!-- Age Field -->
+              <label class="form__label" for="age">*Age:</label>
+              <input
+                class="form__input"
+                type="number"
+                id="age"
+                name="age"
+                min="1"
+                required
+              />
+              
+              <!-- Radio Buttons -->
+              <label class="form__label">Affected Body Part:</label>
+              <div class="radio-grid">
+                <div class="radio-grid__item">
+                  <input
+                    type="radio"
+                    id="head"
+                    name="affected-part"
+                    value="head"
+                  />
+                  <label class="form__label" for="head">Head</label>
+                </div>
+                <div class="radio-grid__item">
+                  <input
+                    type="radio"
+                    id="torso"
+                    name="affected-part"
+                    value="torso"
+                  />
+                  <label class="form__label" for="torso">Torso</label>
+                </div>
+                <div class="radio-grid__item">
+                  <input
+                    type="radio"
+                    id="arms"
+                    name="affected-part"
+                    value="arms"
+                  />
+                  <label class="form__label" for="arms">Arms</label>
+                </div>
+                <div class="radio-grid__item">
+                  <input
+                    type="radio"
+                    id="legs"
+                    name="affected-part"
+                    value="legs"
+                  />
+                  <label class="form__label" for="legs">Legs</label>
+                </div>
+              </div>
+              
+              <!-- Ailment Field -->
+              <label class="form__label" for="ailment">*Ailment:</label>
+              <textarea
+                class="form__textarea"
+                id="ailment"
+                name="ailment"
+                rows="3"
+                required
+              ></textarea>
+  
+              <button class="form__button" type="submit">Submit</button>
+            </form>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

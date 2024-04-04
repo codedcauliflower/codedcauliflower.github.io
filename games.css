@@ -1,0 +1,82 @@
+:root {
+  /* Define color variables */
+  --dark-red: #331111;
+  --bright-red: #831f16;
+  --yellow: #ddcc66;
+  --dark-peach: #c09268;
+}
+
+.content-container {
+  /* Add top margin to the content container */
+  margin-top: 80px;
+}
+
+.cards {
+  /* Display cards in a grid layout */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.card {
+  /* Set initial styles for card */
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.5s;
+}
+
+.card:hover {
+  /* Rotate the card on hover */
+  transform: rotateX(20deg) rotateY(-10deg); /* Rotate upwards */
+}
+
+.card__img-div {
+  /* Make the image div shrink to fit content */
+  flex-shrink: 0;
+}
+
+.card__img {
+  /* Set aspect ratio and cover object-fit for card image */
+  aspect-ratio: 1/1.5;
+  object-fit: cover;
+}
+
+.card__text {
+  /* Style the card text */
+  color: #fff;
+  position: absolute;
+  bottom: 8%;
+  transform: translateY(-50%);
+  transition: transform 0.5s;
+  font: 700 1.5rem monospace;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+}
+
+.card:hover .card__text {
+  /* Translate the card text on hover */
+  transform: translateZ(50px);
+}
+
+.card__steam-link {
+  /* Position the Steam link */
+  position: absolute;
+  bottom: 0%;
+  left: 2%;
+}
+
+.card__steam-link-img {
+  /* Set the size of the Steam link image */
+  width: 40px;
+}

@@ -1,0 +1,83 @@
+:root {
+  /* Define color variables */
+  --dark-red: #331111;
+  --bright-red: #831f16;
+  --yellow: #ddcc66;
+  --dark-peach: #c09268;
+}
+
+body {
+  /* Set font family and background color for the body */
+  font-family: monospace;
+  background-color: var(--dark-red);
+}
+
+.header {
+  /* Style the header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  /* Set the width of the logo */
+  width: 300px;
+}
+
+.header__logo,
+.img-container__character {
+  /* Apply screen blend mode */
+  mix-blend-mode: screen;
+}
+
+.page-title {
+  /* Style the page title */
+  margin-left: 4rem;
+  font-size: 60px;
+  color: var(--bright-red);
+}
+
+.nav {
+  /* Style the navigation */
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-right: 40px;
+}
+
+.nav__link {
+  /* Style the navigation links */
+  color: var(--dark-peach);
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.nav__list {
+  /* Style the navigation list */
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  /* Style the navigation items */
+  border: 1px solid var(--bright-red);
+  padding: 7px;
+  margin: 8px;
+  transition: border 0.5s ease-out 0s;
+}
+
+.nav__item:hover {
+  /* Style the navigation items on hover */
+  border: 1px solid var(--yellow);
+  transition: border 0.5s ease-in 0s;
+}
+
+p {
+  /* Style paragraphs */
+  color: var(--dark-peach);
+  width: 500px;
+}

@@ -1,0 +1,153 @@
+/* Define CSS variables for colors */
+:root {
+  --dark-red: #331111;
+  --bright-red: #831f16;
+  --yellow: #ddcc66;
+  --dark-peach: #c09268;
+}
+
+/* Styles for the main content container */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150vh; /* Optional: If you want to center vertically on the page */
+}
+
+/* Styles for the image container */
+.img-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Styles for the character image */
+.img-container__character {
+  display: block;
+  max-width: 100%;
+  height: 700px;
+  margin: 0 auto;
+}
+
+/* Styles for the text container */
+.text-container {
+  position: absolute;
+  top: 0;
+  left: 60px;
+
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "top-left top-right"
+    "bottom-left bottom-right";
+
+  align-items: center;
+  justify-items: center;
+}
+
+/* Styles for the top-left text */
+.text-container__top-left {
+  grid-area: top-left;
+  max-width: 400px; /* Adjust as needed */
+  text-align: right;
+  margin-right: 0rem;
+}
+
+/* Styles for the bottom-right text */
+.text-container__bottom-right {
+  grid-area: bottom-right;
+  max-width: 400px; /* Adjust as needed */
+  text-align: left;
+  margin-left: 3rem;
+}
+
+/* Styles for the table heading */
+.table-heading {
+  font-size: 40px;
+
+  color: var(--yellow);
+
+  margin-top: 10%;
+}
+
+/* Styles for the table container heading */
+.table-container__heading {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: left;
+  color: var(--dark-red);
+  padding-left: 10px;
+}
+
+/* Styles for table cells */
+.table-container__cell {
+  font-weight: normal;
+  font-size: 1em;
+  box-shadow: 0 2px 2px -2px #0e1119;
+}
+
+/* Styles for the table container */
+.table-container {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+
+  display: table;
+  padding: 0 0 8em 0;
+}
+
+/* Styles for table rows and cells */
+.table-container th,
+.table-container td {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  padding-left: 2%;
+
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: line;
+
+  color: var(--dark-peach);
+}
+
+/* Background-color of the odd rows */
+.table-container__row--odd {
+  background-color: #4b120d;
+}
+
+/* Background-color of the even rows */
+.table-container__row--even {
+  background-color: var(--bright-red);
+}
+
+/* Background-color of table headings */
+.table-container th {
+  background-color: var(--dark-peach);
+}
+
+/* Styles for the first cell in each row */
+.table-container__cell--first {
+  color: var(--yellow);
+}
+
+/* Hover styles for table rows */
+.table-container__row:hover {
+  background-color: #222222;
+  box-shadow: 0 6px 6px -6px #0e1119;
+}
+
+/* Hover styles for table cells */
+.table-container__cell:hover {
+  background-color: var(--yellow);
+  color: #403e10;
+  font-weight: bold;
+
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: line;
+}

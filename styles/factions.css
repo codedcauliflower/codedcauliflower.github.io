@@ -36,6 +36,13 @@
   overflow: visible;
   box-shadow: 0 10px 13px rgba(0, 0, 0, 0.12), 0 5px 10px rgba(0, 0, 0, 0.24);
   border: 2px solid var(--dark-peach);
+
+  transition: all 0.5s ease;
+}
+
+.card.animated {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .card__img-container {
@@ -89,4 +96,25 @@ svg {
   /* Style for the card button on hover */
   border: 1px solid var(--bright-red);
   background-color: var(--bright-red);
+}
+
+.animation-section {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.animation-section button {
+  background-color: var(--dark-red);
+  color: var(--dark-peach);
+
+  border: 2px solid var(--dark-peach);
+  border-radius: 5px;
+
+  padding: 4px 10px;
+  margin: 10px;
+
+  cursor: pointer;
 }

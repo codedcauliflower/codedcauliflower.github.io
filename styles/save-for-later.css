@@ -1,0 +1,17 @@
+/* Style for the container of each saved image */
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin: 0 20px 0 30px;
+}
+
+/* Style for the delete button */
+.delete-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  color: red;
+  font-size: 18px;
+  padding-right: 5px;
+}

@@ -29,6 +29,16 @@
   margin: 0 auto;
 }
 
+.preserve-element {
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
 /* Styles for the text container */
 .text-container {
   position: absolute;

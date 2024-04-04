@@ -14,8 +14,9 @@ body {
 
 .header {
   /* Style the header */
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 20fr 1fr;
+  justify-content: center;
   align-items: center;
 }
 
@@ -35,6 +36,41 @@ body {
   margin-left: 4rem;
   font-size: 60px;
   color: var(--bright-red);
+}
+
+.like-form {
+  /* Style for the like form */
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#like-form button {
+  background-color: var(--dark-red);
+  color: var(--dark-peach);
+
+  border: 2px solid var(--dark-peach);
+  border-radius: 5px;
+
+  padding: 4px 12px;
+  margin-top: 2rem;
+  margin-left: 4rem;
+
+  cursor: pointer;
+}
+
+.hide-button {
+  background-color: var(--dark-red);
+  color: var(--bright-red);
+
+  border: 2px solid var(--bright-red);
+  border-radius: 5px;
+
+  padding: 4px 12px;
+  margin-top: 2rem;
+  margin-left: 4rem;
+
+  cursor: pointer;
 }
 
 .nav {
@@ -76,8 +112,23 @@ body {
   transition: border 0.5s ease-in 0s;
 }
 
+.nav__icon {
+  border: none;
+}
+
+.nav__icon:hover {
+  border: none;
+}
+
 p {
   /* Style paragraphs */
   color: var(--dark-peach);
   width: 500px;
+}
+
+.heart {
+  width: 40px;
+  height: 40px;
+
+  margin-right: 50px;
 }

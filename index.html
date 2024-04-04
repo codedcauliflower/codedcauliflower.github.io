@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Link to CSS files -->
-    <link rel="stylesheet" href="./globals.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts/global.js"></script>
+    <script src="./scripts/index.js"></script>
 
     <title>Home</title>
   </head>
@@ -33,15 +38,29 @@
           </li>
         </ul>
       </nav>
+
+      <lord-icon
+        class="heart"
+        src="https://cdn.lordicon.com/igciyimj.json"
+        trigger="hover"
+        colors="primary:#c09268,secondary:#831f16,tertiary:#ffc738,quaternary:#f9c9c0,quinary:#f24c00,senary:#ebe6ef">
+      </lord-icon>
     </header>
 
     <section>
       <!-- Page title -->
       <span class="page-title">HOME</span>
+      
+      <form id="like-form">
+        <button type="submit">Like</button>
+      </form>
+      
+      <button class="hide-button preserve-element">Toggle Hide All</button>
+
       <!-- Main content container -->
       <div class="content-container">
         <!-- Image container -->
-        <div class="img-container">
+        <div class="img-container preserve-element">
           <!-- Character image -->
           <img
             class="img-container__character"
@@ -49,7 +68,7 @@
             alt="main-character.png"
           />
           <!-- Text container -->
-          <div class="text-container">
+          <div class="text-container preserve-element">
             <!-- Top-left text -->
             <p class="text-container__top-left">
               In the Mojave Wasteland, there's a courier with a mysterious past

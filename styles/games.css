@@ -11,6 +11,89 @@
   margin-top: 80px;
 }
 
+.comments {
+  /* Style for the comments section */
+  margin-top: 10rem;
+  margin-left: 20px;
+
+  color: var(--dark-peach);
+
+  display: flex;
+}
+
+.comments h1 {
+  font-size: 30px;
+  margin-right: 5rem;
+}
+
+.comment-card {
+  /* Style for individual comment cards */
+  background-color: var(--dark-red);
+  border: 2px solid var(--dark-peach);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+
+  max-width: 300px;
+}
+
+.comment-card__header {
+  /* Style for the comment card header */
+  margin-bottom: 10px;
+}
+
+.comment-card__name {
+  /* Style for the commenter's name */
+  color: var(--yellow);
+  font-size: 18px;
+  margin: 0;
+}
+
+.comment-card__text {
+  /* Style for the comment text */
+  color: #ddd;
+  margin: 0;
+}
+
+.comment-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30rem;
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+
+  color: var(--dark-peach);
+
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid var(--dark-peach);
+  border-radius: 5px;
+
+  margin-bottom: 10rem;
+}
+
+#comment-form > :nth-child(even) {
+  margin-bottom: 20px;
+
+  background-color: var(--dark-red);
+  border: 2px solid var(--dark-peach);
+  border-radius: 5px;
+}
+
+#comment-form button {
+  /* Style for the comment submit button */
+  background-color: var(--bright-red);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .cards {
   /* Display cards in a grid layout */
   display: grid;
@@ -79,4 +162,16 @@
 .card__steam-link-img {
   /* Set the size of the Steam link image */
   width: 40px;
+}
+
+.lord-icon {
+  /* Position the Heart Icon */
+  position: absolute;
+  bottom: 0%;
+  right: 2%;
+
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
 }

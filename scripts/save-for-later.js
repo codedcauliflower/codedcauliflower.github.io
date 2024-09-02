@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // Constant for localStorage key
+  const SAVED_ITEMS_KEY = 'savedItems';
+
   // Get the saved items container element
   const savedItemsContainer = document.getElementById('saved-items');
 
@@ -14,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to render saved items on the "Save for Later" page
   function renderSavedItems() {
-    const savedItems = getSavedItems();
+    const savedItems = JSON.parse(localStorage.getItem(SAVED_ITEMS_KEY)) || [];
     savedItemsContainer.innerHTML = '';
 
     savedItems.forEach(imgSrc => {
@@ -39,9 +42,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Function to delete an image from the HTML page and localStorage
   function deleteImage(imgSrc) {
-    const savedItems = getSavedItems();
+    const savedItems = JSON.parse(localStorage.getItem(SAVED_ITEMS_KEY)) || [];
     const updatedItems = savedItems.filter(item => item !== imgSrc);
-    saveItems(updatedItems);
+    localStorage.setItem(SAVED_ITEMS_KEY, JSON.stringify(updatedItems));
     renderSavedItems();
   }
 

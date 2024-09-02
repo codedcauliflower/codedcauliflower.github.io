@@ -5,6 +5,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Get the saved items container element
   const savedItemsContainer = document.getElementById('saved-items');
 
+  // Function to get saved items from localStorage
+  function getSavedItems() {
+    return JSON.parse(localStorage.getItem('savedItems')) || [];
+  }
+
+  // Function to save items back to localStorage
+  function saveItems(items) {
+    localStorage.setItem('savedItems', JSON.stringify(items));
+  }
+
   // Function to render saved items on the "Save for Later" page
   function renderSavedItems() {
     const savedItems = JSON.parse(localStorage.getItem(SAVED_ITEMS_KEY)) || [];
